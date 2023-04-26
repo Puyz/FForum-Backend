@@ -1,5 +1,5 @@
-﻿using Core.Utilities.Abstracts;
-using Core.Utilities.Concretes;
+﻿using Core.Utilities.Results.Concretes;
+using Core.Utilities.Results.Abstracts;
 using Entities.Concretes;
 using Repositories.Abstracts;
 using Services.Abstracts;

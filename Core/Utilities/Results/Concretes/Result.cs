@@ -1,6 +1,6 @@
-﻿using Core.Utilities.Abstracts;
+﻿using Core.Utilities.Results.Abstracts;
 
-namespace Core.Utilities.Concretes
+namespace Core.Utilities.Results.Concretes
 {
     public class Result : IResult
     {
@@ -9,11 +9,11 @@ namespace Core.Utilities.Concretes
 
         public Result(bool success, string message) : this(success)
         {
-            this.Message = message;
+            Message = message;
         }
         public Result(bool success)
         {
-            this.Success = success;
+            Success = success;
         }
 
     }

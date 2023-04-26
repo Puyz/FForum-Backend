@@ -1,4 +1,4 @@
-﻿using Core.Utilities.Abstracts;
+﻿using Core.Utilities.Results.Abstracts;
 using Entities.Concretes;
 
 namespace Services.Abstracts

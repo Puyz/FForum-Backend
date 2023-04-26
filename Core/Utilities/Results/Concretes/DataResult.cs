@@ -1,6 +1,6 @@
-﻿using Core.Utilities.Abstracts;
+﻿using Core.Utilities.Results.Abstracts;
 
-namespace Core.Utilities.Concretes
+namespace Core.Utilities.Results.Concretes
 {
     public class DataResult<T> : Result, IDataResult<T>
     {
@@ -8,11 +8,11 @@ namespace Core.Utilities.Concretes
 
         public DataResult(T data, bool success, string message) : base(success, message)
         {
-            this.Data = data;
+            Data = data;
         }
         public DataResult(T data, bool success) : base(success)
         {
-            this.Data = data;
+            Data = data;
         }
     }
 }

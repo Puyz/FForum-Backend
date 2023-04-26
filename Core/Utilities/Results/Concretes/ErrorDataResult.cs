@@ -1,4 +1,4 @@
-﻿namespace Core.Utilities.Concretes
+﻿namespace Core.Utilities.Results.Concretes
 {
     public class ErrorDataResult<T> : DataResult<T>
     {

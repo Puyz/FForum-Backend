@@ -1,4 +1,4 @@
-﻿namespace Core.Utilities.Concretes
+﻿namespace Core.Utilities.Results.Concretes
 {
     public class SuccessDataResult<T> : DataResult<T>
     {

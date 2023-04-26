@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Utilities.Concretes
+namespace Core.Utilities.Results.Concretes
 {
     public class ErrorResult : Result
     {
