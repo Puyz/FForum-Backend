@@ -1,16 +1,13 @@
 ﻿using Core.Repositories.EntityFramework;
 using Entities.Concretes;
 using Repositories.Abstracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositories.Concretes.EntityFramework
 {
     public class EfUserRepository : EfEntityRepositoryBase<User, FForumContext>, IUserRepository
     {
+
+
         public User GetByUsername(string username)
         {
             using (var context = new FForumContext())
