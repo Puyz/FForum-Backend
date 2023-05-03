@@ -1,6 +1,7 @@
 ﻿using Core.Utilities.Results.Abstracts;
 using Core.Utilities.Results.Concretes;
 using Entities.Concretes;
+using Entities.DTOs;
 using Repositories.Abstracts;
 using Services.Abstracts;
 
@@ -21,10 +22,10 @@ namespace Services.Concretes
             return new SuccessResult("Kullanıcı eklendi");
         }
 
-        public IDataResult<List<User>> GetAll()
+        public IDataResult<List<UserDto>> GetAllWithRank()
         {
-            List<User> users = userRepository.GetAll();
-            return new SuccessDataResult<List<User>>(users);
+            List<UserDto> users = userRepository.GetAllWithRank();
+            return new SuccessDataResult<List<UserDto>>(users);
         }
 
         public IDataResult<User> GetByUsername(string username)
