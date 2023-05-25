@@ -21,7 +21,8 @@ namespace Services.DependencyResolvers
             builder.RegisterType<EfUserRepository>().As<IUserRepository>().SingleInstance();
             builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
 
-            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
+            builder.RegisterType<EfPostRepository>().As<IPostRepository>().SingleInstance();
+            builder.RegisterType<PostManager>().As<IPostService>().SingleInstance();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()

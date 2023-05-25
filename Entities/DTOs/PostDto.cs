@@ -1,18 +1,19 @@
 ﻿using Core.Entities;
+using Entities.Concretes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Concretes
+namespace Entities.DTOs
 {
-    public class Post : IEntity
+    public class PostDto : IDto
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
-        public int CategoryId { get; set; }
-        public int? SubCategoryId { get; set; }
+        public int PostId { get; set; }
+        public PostUserDto User { get; set; }
+        public Category Category { get; set; }
+        public SubCategory? SubCategory { get; set; }
         public string Title { get; set; }
         public string? Description { get; set; }
         public DateTime? CreatedDate { get; set; }
