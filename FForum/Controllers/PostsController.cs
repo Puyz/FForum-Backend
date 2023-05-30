@@ -20,5 +20,11 @@ namespace FForum.Controllers
             var result = postService.GetAllWithUser();
             return (result.Success) ? Ok(result) : BadRequest();
         }
+        [HttpGet("get/{postId}")]
+        public IActionResult GetAll(int postId)
+        {
+            var result = postService.GetPost(postId);
+            return (result.Success) ? Ok(result) : BadRequest();
+        }
     }
 }

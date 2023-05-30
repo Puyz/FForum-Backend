@@ -6,5 +6,6 @@ namespace Services.Abstracts
     public interface IPostService
     {
         IDataResult<List<PostDto>> GetAllWithUser();
+        IDataResult<PostDto> GetPost(int id);
     }
 }

@@ -11,6 +11,7 @@ namespace Entities.DTOs
     public class PostUserDto : IDto
     {
         public int UserId { get; set; }
+        public Rank Rank { get; set; }
         public string Username { get; set; }
         public string Fullname { get; set; }
         public string? Image { get; set; }

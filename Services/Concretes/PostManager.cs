@@ -24,5 +24,10 @@ namespace Services.Concretes
             List<PostDto> posts = postRepository.GetAllWithUser();
             return new SuccessDataResult<List<PostDto>>(posts);
         }
+
+        public IDataResult<PostDto> GetPost(int id)
+        {
+            return new SuccessDataResult<PostDto>(postRepository.GetPost(id));
+        }
     }
 }

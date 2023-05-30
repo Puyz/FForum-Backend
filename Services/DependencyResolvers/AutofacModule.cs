@@ -24,6 +24,9 @@ namespace Services.DependencyResolvers
             builder.RegisterType<EfPostRepository>().As<IPostRepository>().SingleInstance();
             builder.RegisterType<PostManager>().As<IPostService>().SingleInstance();
 
+            builder.RegisterType<EfMessageRepository>().As<IMessageRepository>().SingleInstance();
+            builder.RegisterType<MessageManager>().As<IMessageService>().SingleInstance();
+
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()
                 .EnableInterfaceInterceptors(new ProxyGenerationOptions()

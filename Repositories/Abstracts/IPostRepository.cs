@@ -12,5 +12,6 @@ namespace Repositories.Abstracts
     public interface IPostRepository : IEntityRepository<Post>
     {
         List<PostDto> GetAllWithUser();
+        PostDto GetPost(int id);
     }
 }
