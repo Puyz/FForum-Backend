@@ -18,6 +18,8 @@ namespace Services.DependencyResolvers
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<StatisticsManager>().As<IStatisticsService>().SingleInstance();
+
             builder.RegisterType<EfUserRepository>().As<IUserRepository>().SingleInstance();
             builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
 
