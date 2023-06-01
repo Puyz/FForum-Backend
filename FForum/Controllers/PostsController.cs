@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Entities.Concretes;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstracts;
 
@@ -24,6 +25,13 @@ namespace FForum.Controllers
         public IActionResult GetAll(int postId)
         {
             var result = postService.GetPost(postId);
+            return (result.Success) ? Ok(result) : BadRequest();
+        }
+
+        [HttpPost("add")]
+        public IActionResult Add([FromBody] Post post)
+        {
+            var result = postService.Add(post);
             return (result.Success) ? Ok(result) : BadRequest();
         }
     }

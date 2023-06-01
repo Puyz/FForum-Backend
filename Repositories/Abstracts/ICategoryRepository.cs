@@ -1,5 +1,6 @@
 ﻿using Core.Repositories;
 using Entities.Concretes;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Repositories.Abstracts
 {
     public interface ICategoryRepository : IEntityRepository<Category>
     {
+        List<NavbarCategoryDto> GetAllWithSubCategory();
     }
 }

@@ -10,5 +10,6 @@ namespace Repositories.Abstracts
 {
     public interface ISubCategoryRepository : IEntityRepository<SubCategory>
     {
+       
     }
 }

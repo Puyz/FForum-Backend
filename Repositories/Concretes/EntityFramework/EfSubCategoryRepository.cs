@@ -6,5 +6,6 @@ namespace Repositories.Concretes.EntityFramework
 {
     public class EfSubCategoryRepository : EfEntityRepositoryBase<SubCategory, FForumContext>, ISubCategoryRepository
     {
+
     }
 }

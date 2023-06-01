@@ -26,6 +26,12 @@ namespace Services.DependencyResolvers
             builder.RegisterType<EfPostRepository>().As<IPostRepository>().SingleInstance();
             builder.RegisterType<PostManager>().As<IPostService>().SingleInstance();
 
+            builder.RegisterType<EfCategoryRepository>().As<ICategoryRepository>().SingleInstance();
+            builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
+
+            builder.RegisterType<EfSubCategoryRepository>().As<ISubCategoryRepository>().SingleInstance();
+            builder.RegisterType<SubCategoryManager>().As<ISubCategoryService>().SingleInstance();
+
             builder.RegisterType<EfMessageRepository>().As<IMessageRepository>().SingleInstance();
             builder.RegisterType<MessageManager>().As<IMessageService>().SingleInstance();
 

@@ -19,6 +19,12 @@ namespace Services.Concretes
             this.postRepository = postRepository;
         }
 
+        public IResult Add(Post post)
+        {
+            postRepository.Add(post);
+            return new SuccessResult("Konu açıldı");
+        }
+
         public IDataResult<List<PostDto>> GetAllWithUser()
         {
             List<PostDto> posts = postRepository.GetAllWithUser();
@@ -29,5 +35,7 @@ namespace Services.Concretes
         {
             return new SuccessDataResult<PostDto>(postRepository.GetPost(id));
         }
+
+        
     }
 }
